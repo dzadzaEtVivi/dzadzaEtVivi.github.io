@@ -22,7 +22,7 @@
 <div class="result">
 
   <h2> Nombre de jour sans se facher </h2>
-  <output class="nbrJour" type="text" id="inc" value="0"></output>
+  <output class="nbrJour" type="text" id="inc" value="0"><var id="loveValue"></output>
 
 </div>
 
@@ -41,6 +41,7 @@
     var i = 0;
     var i1 = 0;
     var loveValue = localStorage.getItem("someVarKey");
+    var audio = new Audio('bestLife.mp3');
 
     function yourFunction(){
     
@@ -50,7 +51,7 @@
       i = 0;
       i1 = 0;
       document.getElementById('inc').value = loveValue;
-
+      audio.play();
         var someVarName = loveValue;
         localStorage.setItem("someVarKey", someVarName);
 
