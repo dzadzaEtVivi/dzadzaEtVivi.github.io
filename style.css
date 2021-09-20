@@ -43,15 +43,15 @@ h2
 {
     cursor:pointer;
     border:none;
-    width: 380px;
+    width: 340px;
     height: 400px;
+    margin-right: 1em;
 }
 .button > #vi
 {
-    background:url(dza.png) no-repeat;
     cursor:pointer;
     border:none;
-    width: 380px;
+    width: 340px;
     height: 400px;
-    margin-left: 10em;
+    margin-left: 2em;
 }

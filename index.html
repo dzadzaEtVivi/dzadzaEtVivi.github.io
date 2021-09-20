@@ -18,8 +18,8 @@
 <h1>Site de l'amour du lovee</h1>
 
 <div class="button">
-  <img src="dza.png" id="dza" onclick=" buttonClick(); this.src='dza2.jpg';" ></button>
-  <button id="vi" onclick="buttonClick2()"></button>
+  <img src="dza.png" id="dza" onclick=" buttonClick(); this.src='dzaValide.png';" ></button>
+   <img src="vi.png" id="vi" onclick=" buttonClick2(); this.src='dzaValide.png';" ></button>
 </div>
 
 <div class="result">
@@ -54,6 +54,13 @@
 
         var someVarName = loveValue;
         localStorage.setItem("someVarKey", someVarName);
+
+        if (document.getElementById("dza").src == "dzaValide.png") 
+        {
+            document.getElementById("dza").src == "dza.png";
+        }
+        
+        document.getElementById("vi").src == "vi.png";
     }
     
     setTimeout(yourFunction, 1000);}
