@@ -31,9 +31,7 @@
 
 
 <script>
-    var i = 0;
-    var i1 = 0;
-    var loveValue = 0;
+
     function buttonClick() {
          ++i;
     }
@@ -41,23 +39,32 @@
          ++i1;
     }
 
+    var i = 0;
+    var i1 = 0;
+    var loveValue = localStorage.getItem("someVarKey");
 
-
-        function yourFunction(){
+    function yourFunction(){
     
     if(i >= 1 && i1 >= 1)
     {
       loveValue++;
       i = 0;
       i1 = 0;
-      console.log(loveValue);
       document.getElementById('inc').value = loveValue;
+
+        var someVarName = loveValue;
+        localStorage.setItem("someVarKey", someVarName);
     }
     
     setTimeout(yourFunction, 1000);}
 
 
     yourFunction();
+
+
+
+
+
 
 </script>
 
