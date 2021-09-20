@@ -7,46 +7,60 @@
   <meta charset="utf-8">
   <title>Titre de la page</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
 </head>
 <body>
 
 
 
-<h1>test</h1>
+<h1>Site de l'amour du love</h1>
+
+<div class="button">
+  <img src="dza.png" id="dza" onclick=" buttonClick(); this.src='dza2.jpg';" ></button>
+  <button id="vi" onclick="buttonClick2()"></button>
+</div>
+
+<div class="result">
+
+  <h2> Nombre de jour sans se facher </h2>
+  <output class="nbrJour" type="text" id="inc" value="0"></output>
+
+</div>
+
+
+<script>
+    var i = 0;
+    var i1 = 0;
+    var loveValue = 0;
+    function buttonClick() {
+         ++i;
+    }
+    function buttonClick2() {
+         ++i1;
+    }
 
 
 
+        function yourFunction(){
+    
+    if(i >= 1 && i1 >= 1)
+    {
+      loveValue++;
+      i = 0;
+      i1 = 0;
+      console.log(loveValue);
+      document.getElementById('inc').value = loveValue;
+    }
+    
+    setTimeout(yourFunction, 1000);}
 
 
+    yourFunction();
 
-
-
-
-
-
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyB8hXek8SHSGXdMOTRG-4f-D-TmCtcfdWM",
-    authDomain: "vivietdzadza.firebaseapp.com",
-    projectId: "vivietdzadza",
-    storageBucket: "vivietdzadza.appspot.com",
-    messagingSenderId: "930804879260",
-    appId: "1:930804879260:web:550c98752763eb6a938259",
-    measurementId: "G-35KJNCLNSN"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
 </script>
+
+
 </body>
 </html>
